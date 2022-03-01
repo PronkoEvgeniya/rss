@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dongle', sans-serif;
+}
+
+*::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #10141f;
+    --blue: #08AAC7;
+    --lightblue: #85E2FF;
+    --yellow: #EEFF6B;
+    --darkyellow: #8f9943;
+    --blueshadow: #79b6c9;
+    --blackshadow: rgba(17, 19, 24, 0.5);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--lightblue), var(--blue));
+    background-size: 300%;
+    animation: gradient 5s ease infinite;
+    padding: 20px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    width: 380px;
+    background: var(--yellow);
+    box-shadow: 0px 6px 15px var(--blackshadow);
+    border-radius: 15px;
+    padding: 25px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container i {
+    cursor: pointer;
+}
+
+/* Artwork */
+.artwork {
+    height: 256px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin: 5px 0;
+    color: var(--black);
+}
+
+.name {
+    font-size: 36px;
+    line-height: 0;
+    margin: 35px 0 30px;
+}
+
+.artist {
+    line-height: 0;
+    font-size: 24px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Progress-bar */
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background-color: var(--darkyellow);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: inherit;
+    border-radius: inherit;
+    width: 0%;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 100%);
+    position: relative;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    border-radius: inherit;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.progress-container:hover .progress-bar::before  {
+    opacity: 1;
+}
+
+.timer {
+    margin-top: 2px;
+    font-style: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Controls */
+.controls {
+    margin: 40px 0 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls i {
+    margin: 0 20px;
+}
+
+.controls i:active {
+    color: var(--blue);
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    max-height: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.link-gh {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 20px;
+    color: var(--black);
+}
+
+.link-gh:hover {
+    color: var(--yellow);
+}
+
+.logo-rs {
+    width: 100px;
+}
+
+.logo-rs:hover {
+    filter: opacity(.5);
+}
