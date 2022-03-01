@@ -1,0 +1,260 @@
+@font-face {
+    font-family: NDS BIOS;
+    src: url(assets/ndsbios_memesbruh03.ttf);
+}
+
+:root {
+    --green: #00AA00;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NDS BIOS;
+    color: var(--green);
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+}
+
+.page {
+    height: calc(100vh - 80px);
+}
+
+.title {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 46px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px auto 0;
+    position: relative;
+}
+
+.rules-screen {
+    border: 5px dashed var(--green); 
+    display: block;
+}
+
+.finished-win {
+    display: none;
+}
+
+.finished-win p,
+.finished-draw p {
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+.span-con,
+.finished-draw span {
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+}
+
+.span-thanks {
+    font-size: 40px;
+    text-align: center;
+    display: none;
+    margin: 10px 0;
+}
+
+.span-thanks-active {
+    display: block;
+}
+
+.table-records {
+    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    right: -160px;
+    max-width: 140px;
+    word-break: break-word;
+    top: 0;
+    gap: 5px;
+}
+
+@media (max-width: 800px) {
+    .table-records {
+        right: 80px;
+        top: 305px;
+    }
+
+    .page {
+        min-height: 800px;
+    }
+}
+.cur-pl {
+    font-size: 20px;
+    opacity: 0;
+}
+
+.cur-pl-active {
+    opacity: 1;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+@keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.4; }
+  }
+
+.table-records h5 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.finished-win input {
+    background-color: transparent;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid var(--green);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+}
+
+.show-btn,
+.finished-draw button {
+    font-size: 24px;
+    background-color: transparent;
+    border: 1px solid var(--green);
+    padding: 5px;
+    font-weight: 700;
+    display: block;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+.hide-btn {
+    display: none;
+}
+
+.finished-win button:hover,
+.finished-draw button:hover {
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+.finished-win-active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.finished-draw {
+    display: none;
+}
+
+.finished-draw-active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.rules-text span {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.next {
+    background-color: transparent;
+    border: 2px solid var(--green);
+    font-weight: 700;
+    padding: 10px;
+    display: block;
+    margin: 30px auto 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.next:hover {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    transition: 1s;
+}
+
+.rules-text p {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.rules-text-none {
+    display: none;
+}
+
+.item {
+    width: 33.33%;
+    border-top: 5px dashed var(--green);    
+    border-right: 5px dashed var(--green);
+    cursor: pointer; 
+    font-size: 100px;
+    line-height: 0;
+    display: flex;
+    text-align: center;
+    padding-left: 10%;
+    align-items: center;
+}
+
+.item:nth-child(7),
+.item:nth-child(8),
+.item:nth-child(9) {
+    border-bottom: 5px dashed var(--green); 
+}
+
+.item:nth-child(1),
+.item:nth-child(4),
+.item:nth-child(7) {
+    border-left: 5px dashed var(--green); 
+}
+
+.rules-start {
+    display: none;
+}
+
+.footer-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    font-size: 30px;
+}
+
+footer a,
+footer span {
+    padding: 3px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+footer a:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    transition: 1s;
+}
+
