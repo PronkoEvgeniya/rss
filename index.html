@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="#">
+    <title>Tic-tac-toe</title>
+</head>
+<body>
+    <main class="page">
+        <h1 class="title">tic-tac-toe</h1>
+        <section class="container rules-screen">
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+            <div class="item rules-start"></div>
+
+            <div class="rules-text">
+                <span>Hello, player!</span>
+                <p>The players take turns. You need to click on any cell of the 3x3 field in order to set the figure. The winner is the one who first sets 3 figures on the same line horizontally, vertically or diagonally. Good luck!</p>
+                <button type="button" class="next">let's go</button>
+            </div>
+            <div class="finished-win">
+                <span class="span-con">Congratulations!</span>
+                <p></p>
+                <span class="span-thanks">Thanks!</span>
+                <input type="text" name="name" placeholder="Enter your name" maxlength="10" autocomplete="off">
+                <button class="show-btn hide-btn">once again</button>
+            </div>
+            <div class="finished-draw">
+                <span>Oops!</span>
+                <p>This time there are no winners! Come on again!</p>
+                <button>once again</button>
+            </div>
+            <div class="table-records">
+                <p class="cur-pl">Active player X</p>
+                <h5>Last results:</h5>
+            </div>
+            <audio id="sound" src="" autoplay></audio>
+        </section>
+    </main>    
+        <footer class="footer-container">
+            <a href="https://github.com/PronkoEvgeniya" target="_blank">github</a>
+            <span>2022</span>
+            <a href="https://rs.school/js-stage0/" target="_blank">RS SCHOOL</a>
+        </footer>
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>
