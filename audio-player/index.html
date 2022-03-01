@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/fav-audio.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom audio-player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="artwork">
+            <img class="image" src="assets/img/falko.jpg" alt="artwork">
+        </div>
+        <div class="title">
+            <p class="name">Shock</p>
+            <p class="artist">Yuko Ando</p>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+            </div>
+            <div class="timer">
+                <span class="current">0:00</span>
+                <span class="duration"></span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+        <div class="controls">
+            <i id="back" class="fas fa-step-backward"></i>
+            <i id="play" class="fas fa-play"></i>
+            <i id="next" class="fas fa-step-forward"></i>
+        </div>        
+    </div>
+    <footer>
+        <a class="link-gh" href="https://github.com/PronkoEvgeniya" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="link-rs" href="https://rs.school/js-stage0/" target="_blank"><img class="logo-rs" src="https://rs.school/images/rs_school_js.svg" alt=""></a>
+    </footer>
+    <script src="https://kit.fontawesome.com/203648b129.js" crossorigin="anonymous"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
